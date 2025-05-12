@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: beige;
+}
+
+.kontener-glowny {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*align-content: flex-end;*/
+    align-items: flex-start;
+    height: 300px;
+
+}
+
+section,
+aside {
+    flex-basis: 25%;
+    height: 100%;
+}
+
+
+.naglowek {
+    background-color: red;
+    height: 50px;
+    text-align: center;
+}
+
+.czesc-zasadnicza {
+    background-color: blue;
+    order: 2;
+    flex-basis: 50%;
+}
+
+.tresc-lewa {
+    background-color: green;
+    order: 1;
+}
+
+.tresc-prawa {
+    background-color: peru;
+    order: 3;
+}
+
+.stopka {
+    background-color: blueviolet;
+    height: 50px;
+}
+
+@media screen and (max-width: 992px) {
+	div,
+    section,
+    aside {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.czesc-zasadnicza,
+    .tresc-lewa,
+    .tresc-prawa {
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+	section,
+    aside {
+		width: 100%;
+	}
+}

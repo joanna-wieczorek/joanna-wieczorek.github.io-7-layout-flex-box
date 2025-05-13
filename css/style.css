@@ -12,7 +12,6 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    /*align-content: flex-end;*/
     align-items: flex-start;
     height: 300px;
 
@@ -22,6 +21,7 @@ section,
 aside {
     flex-basis: 25%;
     height: 100%;
+    flex-grow: 1;
 }
 
 
@@ -50,20 +50,20 @@ aside {
 .stopka {
     background-color: blueviolet;
     height: 50px;
+    width: 100%;
+    order: 4;
 }
 
 @media screen and (max-width: 992px) {
-	div,
-    section,
+	section,
     aside {
 		width: 100%;
 	}
 }
 
 @media screen and (max-width: 768px) {
-	.czesc-zasadnicza,
-    .tresc-lewa,
-    .tresc-prawa {
+	section,
+    aside {
 		width: 100%;
 	}
 
